@@ -1,2 +1,2 @@
-# runtime-utils-java
-Developing adaptors for platform-related library. (e.g. aliyun oss, aws s3) 
+# Env-java
+Runtime env for java
