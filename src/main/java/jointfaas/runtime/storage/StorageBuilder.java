@@ -1,6 +1,7 @@
 package jointfaas.runtime.storage;
 
 import jointfaas.runtime.storage.cloud.StorageAli;
+import jointfaas.runtime.storage.uniform.StorageRedis;
 
 import java.util.Map;
 
@@ -23,6 +24,8 @@ public class StorageBuilder {
         if (!map.containsKey("REDIS")) {
             throw new EnvException();
         }
-        return null;
+        String redisHost = map.get("REDIS_HOST");
+        StorageRedis storageRedis = new StorageRedis(redisHost);
+        return storageRedis;
     }
 }
